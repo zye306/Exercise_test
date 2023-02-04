@@ -27,5 +27,5 @@ shapely==1.8.4
 hvplot
 geopandas
 pyproj>3.0.0
-pipwin
+seaborn
 # piplite
