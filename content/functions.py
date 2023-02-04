@@ -13,7 +13,7 @@ import cartopy.crs as ccrs
 class aerosol_dehm:
 
     def __init__(self):
-        self.infile = 'DEHM_output.nc'
+        self.infile = 'data/DEHM_output.nc'
         self.initial_load()
         self.par = 'SO4_ugSm-3'
         self.vname = 'Sulfate'
