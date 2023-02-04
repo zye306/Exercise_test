@@ -20,6 +20,7 @@ jupyterlite-xeus-sqlite==0.2.1
 plotly>=5,<6
 theme-darcula
 xarray
+hdf5==1.12.1
 proj==8.2.1
 geos==3.9.1
 cartopy==0.21.1
