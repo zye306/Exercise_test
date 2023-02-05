@@ -24,6 +24,26 @@ class aerosol_dehm:
     def initial_load(self):
         self.ds = xr.open_dataset(self.infile)
 
+    def map_to_dataframe(self,var=None):
+        var = self.par if var is None else var
+        lat,lon = self.ds['lat'].values, self.ds['lon'].values
+        outdict={'x':[],'y':[],'lat':[],'lon':[],var:[]}
+        arr = self.ds[var].values
+        for i in range(300):
+            for j in range(300):
+                outdict['x'].append(i)
+                outdict['y'].append(j)
+                outdict['lat'].append(lat[i,j])
+                outdict['lon'].append(lon[i,j])
+                outdict[var].append(arr[i,j])
+        
+        # print(outdict)
+        outdf = pd.DataFrame.from_dict(outdict)
+        # print(outdf)
+        return outdf
+
+    
+        
 
     # def plot_annual_map(self,par=None,vmin=None,vmax=None):
     #     fig, ax = plt.subplots(subplot_kw={'projection': ccrs.NorthPolarStereo(central_longitude=-32)})

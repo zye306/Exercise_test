@@ -33,4 +33,5 @@ xarray
 # geopandas
 # pyproj>3.0.0
 seaborn
+statsmodels
 # piplite
