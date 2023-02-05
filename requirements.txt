@@ -21,6 +21,7 @@ jupyterlite-xeus-sqlite==0.2.1
 dash==2.8.1
 plotly==5.13.0
 theme-darcula
+netcdf4==1.6.2
 # distutils
 nbformat==5.7.3
 xarray
